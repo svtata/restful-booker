@@ -14,14 +14,14 @@ public class AuthTests {
 
     @DisplayName("Successful login")
     @Test
-    void successfulLoginTest(){
+    void successfulLoginTest() {
         String tokenAuth = tokenService.getAuthorizationToken("admin", "password123");
         assertThat(tokenAuth).isNotEmpty();
     }
 
     @DisplayName("Unsuccessful login (wrong password)")
     @Test
-    void unsuccessfulLoginTest(){
+    void unsuccessfulLoginTest() {
         tokenService
                 .tokenRequest("admin", "1234")
                 .then()
