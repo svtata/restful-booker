@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Feature;
 import models.Booking;
 import models.BookingDates;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,6 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
+@Feature("Realization of booking service")
 public class BookingTests {
     private int bookingId;
 
